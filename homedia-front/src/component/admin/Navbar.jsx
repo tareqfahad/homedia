@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import { Menu, Sidebar , Icon } from 'semantic-ui-react'
 
 class Navbar extends React.Component {
   render () {
@@ -9,7 +9,34 @@ class Navbar extends React.Component {
 
 
 
-            navbar
+          <div>
+
+          <Sidebar
+            as={Menu}
+            animation='overlay'
+            icon='labeled'
+            inverted
+            vertical
+            visible
+            width='thin'
+          >
+
+          <Menu.Item as='a'>
+             <Icon name='home' />
+             Home
+           </Menu.Item>
+           <Menu.Item as='a'>
+             <Icon name='cloud upload' />
+             Upload content
+           </Menu.Item>
+           <Menu.Item as='a'>
+             <Icon name='settings' />
+             Channels
+           </Menu.Item>
+         </Sidebar>
+
+
+          </div>
 
 
         )

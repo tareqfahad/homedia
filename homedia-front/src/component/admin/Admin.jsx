@@ -1,25 +1,19 @@
 import React from 'react'
-import { Button } from 'semantic-ui-react'
-
+import Navbar from './Navbar'
 
 class Admin extends React.Component {
   render () {
 
-        return(
-          <div>
+      return(
+
+        <div>
+
+        <Navbar/>
+
+        </div>
 
 
-            <div>
-              <Button content='Primary' primary />
-              <Button content='Secondary' secondary />
-            </div>
-
-
-
-
-          </div>
-        )
-
+      )
 
 
 
