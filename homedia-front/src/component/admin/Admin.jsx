@@ -1,4 +1,5 @@
 import React from 'react'
+import { Grid, Image } from 'semantic-ui-react'
 
 
 class Admin extends React.Component {
@@ -7,9 +8,33 @@ class Admin extends React.Component {
 
         return(
 
-            <div>
+            <div className="FormController">
 
-                <h1>Hello</h1>
+                <Grid called>
+              <Grid.Row>
+                    <Grid.Column width={3}>
+
+                    </Grid.Column>
+                    <Grid.Column width={10}>
+
+                      This is some talk
+
+
+
+                    </Grid.Column>
+                    <Grid.Column width={3}>
+
+                    </Grid.Column>
+                  </Grid.Row>
+                </Grid>
+
+
+
+
+
+
+
+
             </div>
 
 
