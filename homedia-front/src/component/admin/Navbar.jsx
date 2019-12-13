@@ -44,7 +44,7 @@ let test =()=>{
            <Link to="/admin/settings">
            <Menu.Item as='a'>
              <Icon name='settings' />
-             Sttings
+             Settings
            </Menu.Item>
             </Link>
          </Sidebar>
