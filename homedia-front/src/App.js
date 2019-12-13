@@ -1,7 +1,7 @@
 import React from 'react'
-import Admin from './component/admin/Admin'
+import AdminApp from './component/admin/AdminApp'
 
-import {BrowserRouter as Router,Switch,Route,Link} from "react-router-dom";
+import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
 
 
 
@@ -17,7 +17,7 @@ class App extends React.Component {
                   <Switch>
                     <Route path="/admin">
 
-                    <Admin/>
+                    <AdminApp/>
 
                     </Route>
 

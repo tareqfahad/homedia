@@ -1,9 +1,11 @@
 import React from 'react'
-import { Menu, Sidebar , Icon } from 'semantic-ui-react'
-
+import { Menu, Sidebar , Icon , Buttton } from 'semantic-ui-react'
 class Navbar extends React.Component {
   render () {
 
+let test =()=>{
+  console.log("Hello")
+}
 
         return(
 
@@ -21,18 +23,21 @@ class Navbar extends React.Component {
             width='thin'
           >
 
-          <Menu.Item as='a'>
-             <Icon name='home' />
+          <Menu.Item as='a' >
+             <Icon name='home'/>
              Home
            </Menu.Item>
-           <Menu.Item as='a'>
+           <Menu.Item as='a' >
              <Icon name='cloud upload' />
-             Upload content
+
+                Upload content
+
            </Menu.Item>
            <Menu.Item as='a'>
              <Icon name='settings' />
-             Channels
+             Sttings
            </Menu.Item>
+
          </Sidebar>
 
 
