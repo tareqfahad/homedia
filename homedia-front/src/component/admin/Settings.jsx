@@ -1,9 +1,9 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+
 
 class Sttings extends React.Component {
   render () {
-
+    console.log("This is Settings");
 
         return(
 

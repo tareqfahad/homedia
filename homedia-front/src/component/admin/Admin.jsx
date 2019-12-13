@@ -3,7 +3,7 @@ import React from 'react'
 
 class Admin extends React.Component {
   render () {
-
+    console.log("This is admin");
 
         return(
 

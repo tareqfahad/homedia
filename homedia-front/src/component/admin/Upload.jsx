@@ -4,6 +4,8 @@ import React from 'react'
 class Upload extends React.Component {
   render () {
 
+    console.log("This is upload");
+
           return(
 
 
