@@ -1,5 +1,6 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import { Button } from 'semantic-ui-react'
+
 
 class Admin extends React.Component {
   render () {
@@ -8,7 +9,10 @@ class Admin extends React.Component {
           <div>
 
 
-            this is admin
+            <div>
+              <Button content='Primary' primary />
+              <Button content='Secondary' secondary />
+            </div>
 
 
 
