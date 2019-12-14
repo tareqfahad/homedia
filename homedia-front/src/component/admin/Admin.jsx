@@ -9,13 +9,6 @@ class Admin extends React.Component {
 
 
 
-let count = [1,0,0,0,0,0,0,0]
-
- let action = count.map(x => {
-        return <Cards name={x}/>
-
-
-})
 
 
         return(
@@ -25,7 +18,7 @@ let count = [1,0,0,0,0,0,0,0]
                 <Grid.Column>
                   <div className="cardsPosition">
 
-                  <Cards/>
+                <h1>Empty</h1>
 
                   </div>
 
