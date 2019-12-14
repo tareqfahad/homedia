@@ -1,32 +1,46 @@
 import React from 'react'
-import { Grid, Image } from 'semantic-ui-react'
+import { Grid, Image , Icon } from 'semantic-ui-react'
+import Piechar from './Pie'
+import Cards from './Cards'
 
 
 class Admin extends React.Component {
   render () {
-    console.log("This is admin");
+
+
+
+let count = [1,0,0,0,0,0,0,0]
+
+ let action = count.map(x => {
+        return <Cards name={x}/>
+
+
+})
+
 
         return(
 
             <div className="FormController">
+              <Grid columns={2} padded='horizontally'>
+                <Grid.Column>
+                  <div className="cardsPosition">
 
-                <Grid called>
-              <Grid.Row>
-                    <Grid.Column width={3}>
+                  <Cards/>
 
-                    </Grid.Column>
-                    <Grid.Column width={10}>
-
-                      This is some talk
+                  </div>
 
 
+                </Grid.Column>
+                <Grid.Column>
 
-                    </Grid.Column>
-                    <Grid.Column width={3}>
 
-                    </Grid.Column>
-                  </Grid.Row>
-                </Grid>
+
+
+                  <Piechar/>
+
+
+                </Grid.Column>
+              </Grid>
 
 
 

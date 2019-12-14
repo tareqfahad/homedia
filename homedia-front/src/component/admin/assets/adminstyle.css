@@ -3,3 +3,57 @@
     margin-top: 200px;
 
 }
+.charPosition{
+      height: 20px;
+
+
+}
+.chartjs-size-monitor{
+  height: 30px;
+  width: 30px;
+}
+
+
+.space{
+  color: #4C6988;
+}
+.used{
+  color: #147D83;
+}
+
+
+.ChardBackground{
+
+
+
+
+
+
+
+
+}
+
+
+
+
+.toMainPage{
+margin-top: 50em;
+margin-left: -23px;
+position: fixed;
+
+color: white;
+
+}
+.toMainPage:hover{
+  color: red;
+}
+
+
+
+
+
+.cardsPosition{
+  position: absolute;
+    margin-left: 800px;
+
+}

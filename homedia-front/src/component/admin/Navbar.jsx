@@ -1,6 +1,7 @@
 import React from 'react'
 import { Menu, Sidebar , Icon , Buttton } from 'semantic-ui-react'
 import { Link } from "react-router-dom";
+import './assets/adminstyle.css'
 class Navbar extends React.Component {
   render () {
 
@@ -47,6 +48,13 @@ let test =()=>{
              Settings
            </Menu.Item>
             </Link>
+
+
+                {/*Needs to Redirect to home page */}
+              <Link to="/admin/settings">
+            <a className="toMainPage">Homedia</a>
+            </Link>
+
          </Sidebar>
 
 
