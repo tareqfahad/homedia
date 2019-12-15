@@ -4,6 +4,17 @@ import { Grid, Segment , Form , Button } from 'semantic-ui-react'
 class UploadVideo extends React.Component {
   render () {
 
+
+
+let onChangeHandler =event=> {
+
+          console.log(event.target.files[0])
+
+
+
+}
+
+
           return(
 
 
@@ -31,17 +42,12 @@ class UploadVideo extends React.Component {
                           <Form.Field>
 
                           <label>Upload Poster</label>
-                            <Button
-                               content="Choose File"
-                               labelPosition="left"
-                               icon="file"
-                               onClick={() => this.fileInputRef.current.click()}
-                             />
                              <input
-                               ref={this.fileInputRef}
+                               accept="image/*"
+                               name="files"
                                type="file"
-                               hidden
-                               onChange={this.fileChange}
+
+                               onChange={onChangeHandler}
                              />
 
 
@@ -52,17 +58,13 @@ class UploadVideo extends React.Component {
                         <Form.Field>
 
                         <label>Upload Video</label>
-                          <Button
-                             content="Choose File"
-                             labelPosition="left"
-                             icon="file"
-                             onClick={() => this.fileInputRef.current.click()}
-                           />
+
                            <input
-                             ref={this.fileInputRef}
+                             accept="video/*"
+                             name="files"
                              type="file"
-                             hidden
-                             onChange={this.fileChange}
+
+                             onChange={onChangeHandler}
                            />
 
 

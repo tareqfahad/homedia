@@ -5,6 +5,19 @@ import { Grid, Segment , Form , Button } from 'semantic-ui-react'
 class UploadMusic extends React.Component {
   render () {
 
+
+
+
+
+
+
+let onChangeHandler=event=>{
+
+        console.log(event.target.files[0])
+
+    }
+
+
           return(
 
 
@@ -22,40 +35,30 @@ class UploadMusic extends React.Component {
 
 
                         <div className="CenterForm">
-
                                   <Form>
                                       <Form.Field>
                                         <label>Playlist</label>
                                         <input placeholder='Playlist Name' type='field' />
                                       </Form.Field>
 
-
-
-
-
-
                                       <Form.Field>
 
                                       <label>Upload Folder</label>
-                                        <Button
-                                           content="Choose File"
-                                           labelPosition="left"
-                                           icon="file"
-                                           onClick={() => this.fileInputRef.current.click()}
-                                         />
+
                                          <input
-                                           ref={this.fileInputRef}
+                                           accept="audio/*"
                                            type="file"
-                                           hidden
-                                           onChange={this.fileChange}
+                                           name="files"
+
+                                           onChange={onChangeHandler}
                                          />
 
 
 
-                                    </Form.Field>
+                     </Form.Field>
 
 
-                                      <Button primary type='submit' >Submit</Button>
+                  <Button primary type='submit'  >Submit</Button>
 
                                       <br/>
                                       <br/>
