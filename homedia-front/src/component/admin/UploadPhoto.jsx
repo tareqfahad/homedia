@@ -18,7 +18,7 @@ class Photo extends React.Component {
       <Segment>
 
 
-        <h1>This service is not availble yet</h1>
+        <h1>This service is not available yet</h1>
 
 
 

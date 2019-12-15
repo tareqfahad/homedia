@@ -4,10 +4,10 @@
 
 }
 .charPosition{
-      height: 20px;
-
-
+height: 20px;
 }
+
+
 .chartjs-size-monitor{
   height: 30px;
   width: 30px;
@@ -25,23 +25,14 @@
 }
 
 
-.ChardBackground{
 
-
-
-
-
-
-
-
-}
 
 
 
 
 .toMainPage{
-margin-top: 50em;
-margin-left: -23px;
+  margin-top: 5em;
+  margin-left: -30px;
 position: fixed;
 
 color: white;
@@ -55,7 +46,7 @@ color: white;
 
 .cardsPosition{
   position: absolute;
-    margin-left: 800px;
+  margin-left: 800px;
 
 }
 

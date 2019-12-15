@@ -32,12 +32,12 @@ state={
               <Pie
                 data={{
 
-                    labels: this.state.lables,
+                    labels: ["Space" , "Used"],
                     datasets : this.state.datasets
 
 
                 }}
-        
+
 
 
 
