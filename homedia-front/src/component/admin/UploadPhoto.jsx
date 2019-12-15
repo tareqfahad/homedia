@@ -8,7 +8,7 @@ class Photo extends React.Component {
         return(
 
 
-          <div>
+          <div className="CenterForm">
 
           <Grid columns='equal'>
       <Grid.Column>

@@ -11,9 +11,9 @@ class UploadMusic extends React.Component {
               <div>
 
 
-                            <div>
+                <div>
 
-                              <Grid columns='equal'>
+                  <Grid columns='equal'>
               <Grid.Column>
 
               </Grid.Column>
@@ -21,41 +21,22 @@ class UploadMusic extends React.Component {
                 <Segment>
 
 
-                        <div>
+                        <div className="CenterForm">
 
                                   <Form>
                                       <Form.Field>
-                                        <label>Name</label>
-                                        <input placeholder='Current Password' type='field' />
+                                        <label>Playlist</label>
+                                        <input placeholder='Playlist Name' type='field' />
                                       </Form.Field>
 
 
 
 
-                                        <Form.Field>
-
-                                        <label>Upload Poster</label>
-                                          <Button
-                                             content="Choose File"
-                                             labelPosition="left"
-                                             icon="file"
-                                             onClick={() => this.fileInputRef.current.click()}
-                                           />
-                                           <input
-                                             ref={this.fileInputRef}
-                                             type="file"
-                                             hidden
-                                             onChange={this.fileChange}
-                                           />
-
-
-
-                                      </Form.Field>
 
 
                                       <Form.Field>
 
-                                      <label>Upload Video</label>
+                                      <label>Upload Folder</label>
                                         <Button
                                            content="Choose File"
                                            labelPosition="left"

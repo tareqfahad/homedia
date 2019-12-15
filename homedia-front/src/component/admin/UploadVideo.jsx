@@ -17,12 +17,12 @@ class UploadVideo extends React.Component {
   <Segment>
 
 
-          <div>
+          <div className="CenterForm">
 
                     <Form>
                         <Form.Field>
                           <label>Name</label>
-                          <input placeholder='Current Password' type='field' />
+                          <input placeholder='File Name' type='field' />
                         </Form.Field>
 
 
