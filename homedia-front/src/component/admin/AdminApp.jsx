@@ -15,7 +15,7 @@ class AdminApp extends React.Component {
 
           <div>
 
-            <Redirect to="/admin/home" />
+
 
 
           <Navbar/>
@@ -34,11 +34,17 @@ class AdminApp extends React.Component {
               </Route>
 
 
-              <Route path="/admin/home">
+              <Route path="/admin">
 
               <Admin/>
 
               </Route>
+
+
+
+
+
+
 
             </Switch>
 
