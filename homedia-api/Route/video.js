@@ -36,8 +36,6 @@ route.get('/find/:id' , ( req, res ) =>{
 
 })
 
-
-
 route.delete('/delete/:id' , (req , res) => {
     Video.remove({_id:req.params.id})
     .then(()=> {
