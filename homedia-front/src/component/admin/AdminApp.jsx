@@ -3,7 +3,7 @@ import Navbar from './Navbar'
 import Admin from './Admin'
 import Upload from './Upload'
 import Settings from './Settings'
-import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
+import {BrowserRouter as Router,Switch,Route , Redirect} from "react-router-dom";
 
 
 class AdminApp extends React.Component {
@@ -14,6 +14,7 @@ class AdminApp extends React.Component {
         <Router>
 
           <div>
+
 
 
 
@@ -33,11 +34,17 @@ class AdminApp extends React.Component {
               </Route>
 
 
-              <Route path="/admin/home">
+              <Route path="/admin">
 
               <Admin/>
 
               </Route>
+
+
+
+
+
+
 
             </Switch>
 

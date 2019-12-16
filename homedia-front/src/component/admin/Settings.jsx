@@ -1,15 +1,88 @@
 import React from 'react'
+import { Grid , Button, Checkbox, Form , Radio, Segment } from 'semantic-ui-react'
+import "./assets/adminstyle.css"
 
-
-class Sttings extends React.Component {
+class Settings extends React.Component {
   render () {
-    console.log("This is Settings");
+
+
+    let submit = () => {
+      console.log("it's work");
+    }
+
+
 
         return(
 
           <div>
 
-              this is settings page
+
+          <Grid>
+
+<Grid.Row columns={5}>
+  <Grid.Column>
+
+  </Grid.Column>
+
+  <Grid.Column>
+
+  </Grid.Column>
+
+
+
+  <Grid.Column>
+
+  <div className="FormController">
+
+    <Form>
+        <Form.Field>
+          <label>Current Password</label>
+          <input placeholder='Current Password' type='password' />
+        </Form.Field>
+
+  <hr/>
+
+        <Form.Field>
+          <label>New Password</label>
+          <input  type='password' placeholder='New Password' />
+        </Form.Field>
+
+        <Form.Field>
+          <label>Confirm New Password</label>
+          <input  type='password' placeholder='Confirm Password' />
+        </Form.Field>
+
+
+
+        <Button primary type='submit' onClick={submit}>Submit</Button>
+
+        <br/>
+        <br/>
+
+        <Form.Field>
+          <Radio toggle label='Disble Easy Access' disabled />
+        </Form.Field>
+
+      </Form>
+
+      </div>
+
+  </Grid.Column>
+
+
+
+  <Grid.Column>
+
+  </Grid.Column>
+
+</Grid.Row>
+</Grid>
+
+
+
+
+
+
 
           </div>
 
@@ -23,4 +96,4 @@ class Sttings extends React.Component {
   }
 }
 
-export default Sttings;
+export default Settings;
