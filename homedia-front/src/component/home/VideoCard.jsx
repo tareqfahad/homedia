@@ -1,19 +1,26 @@
+import HorizontalScroller from 'react-horizontal-scroll-container';
+import { Card, Icon, Image, Grid } from 'semantic-ui-react'
 import React from 'react'
-import {Card, Button, Col} from 'react-bootstrap';
 
 
 const VideoCard = (props) => {
     return (
-        <div>
+        <div style={{"margin":"5px"}}>
+{/* <HorizontalScroller> */}
+{/* <Grid >
+    <Grid.Column> */}
+    {/* style={{width: '18rem' }} */}
+    <Card >
+        <Image variant="top" src={props.book.volumeInfo.imageLinks !== undefined ?  props.book.volumeInfo.imageLinks.thumbnail : props.img} alt="books"/>
+        <Card.Content>
+            <Card.Header>{props.book.volumeInfo.title}</Card.Header>
+        </Card.Content>
+    </Card>
+    {/* </Grid.Column>
+    </Grid> */}
+    {/* </HorizontalScroller> */}
 
-<Col md="4">
-    <Card style={{width: '18rem' }}>
-    <Card.Img style={{width: '18rem', height:'18rem'}} variant="top" src={props.book.volumeInfo.imageLinks !== undefined ?  props.book.volumeInfo.imageLinks.thumbnail : props.img} alt="books"/>
-    <Card.Body>
-    <Card.Title>{props.book.volumeInfo.title}</Card.Title>
-    </Card.Body>
-</Card>
-</Col>
+
         </div>
     )
 }

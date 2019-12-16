@@ -32,11 +32,14 @@ class VideoPlay extends Component {
     return (
       <div>
         <NavBar/>
-        <h1>VideoPlayer</h1>
+        {/* <h1>VideoPlayer</h1> */}
 
-        {this.state.data !== null && this.state.data.data.map((videoss, i)=>{
+        {/* {this.state.data !== null && this.state.data.data.map((videoss, i)=>{
           return <VideoPlayContainer video={videoss}/>
-       })}
+       })} */}
+       
+       <VideoPlayContainer/>
+     
       </div>
     );
   }

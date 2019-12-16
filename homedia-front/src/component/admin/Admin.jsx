@@ -18,7 +18,7 @@ class Admin extends React.Component {
                 <Grid.Column>
                   <div className="cardsPosition">
 
-                <h1>Empty</h1>
+                <h1><Cards/></h1>
 
                   </div>
 

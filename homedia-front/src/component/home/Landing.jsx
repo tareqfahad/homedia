@@ -1,11 +1,14 @@
 import NavBar from './NavBar'
-import {Row} from 'react-bootstrap';
 import VideoCard from './VideoCard'
 import axios from 'axios'
+import ReactDOM from 'react-dom';
+import { Grid } from 'semantic-ui-react'
+import HorizontalScroller from 'react-horizontal-scroll-container';
 
 import React, { Component } from 'react'
 
-export default class Landing extends Component {
+
+class Landing extends Component {
     constructor(props) {
         super();
         this.state = {
@@ -26,15 +29,33 @@ export default class Landing extends Component {
     render() {
         return (
             <div>
-                <NavBar/>
-                this is landing page
-                {/* <VideoCard/> */}
-                <Row style={{marginLeft: "68px"}}>
-       {this.state.data !== null && this.state.data.data.items.map((bookss, i)=>{
-          return <VideoCard book={bookss}/>
-       })}
-        </Row>
+              <NavBar/>
+                <h4><b>Videos</b></h4>
+                
+                <Grid>
+              <Grid.Column>
+              <HorizontalScroller>
+                    {this.state.data !== null && this.state.data.data.items.map((bookss, i)=>{
+                return <VideoCard book={bookss}/>
+                                  })}
+                                  </HorizontalScroller>
+                                  </Grid.Column>
+                                  </Grid>
+
+  
+        {/* <hr/> */}
+        <h4><b>Music</b></h4>
+        <Grid>
+              <Grid.Column>
+              <HorizontalScroller>
+                    {this.state.data !== null && this.state.data.data.items.map((bookss, i)=>{
+                return <VideoCard book={bookss}/>
+                                  })}
+                                  </HorizontalScroller>
+                                  </Grid.Column>
+                                  </Grid>
             </div>
         )
     }
 }
+export default Landing
