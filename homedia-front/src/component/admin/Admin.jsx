@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Image , Icon } from 'semantic-ui-react'
+import { Grid, Image , Icon  , Card} from 'semantic-ui-react'
 import Piechar from './Pie'
 import Cards from './Cards'
 
@@ -14,26 +14,25 @@ class Admin extends React.Component {
         return(
 
             <div className="FormController">
-              <Grid columns={2} padded='horizontally'>
-                <Grid.Column>
-                  <div className="cardsPosition">
-
-                <h1><Cards/></h1>
-
-                  </div>
 
 
-                </Grid.Column>
-                <Grid.Column>
+          <Grid columns={3} padded='vertically'>
+            <Grid.Column>
+
+            </Grid.Column>
+            <Grid.Column>
+
+              <Card.Group>
+
+                <Cards/>
 
 
-
-
-                  <Piechar/>
-
-
-                </Grid.Column>
-              </Grid>
+            </Card.Group>
+            </Grid.Column>
+            <Grid.Column>
+              <Piechar/>
+            </Grid.Column>
+          </Grid>
 
 
 

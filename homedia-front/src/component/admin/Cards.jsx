@@ -7,6 +7,12 @@ class Cards extends React.Component {
 
     console.log('this is CARDS');
 
+let testprofile = () =>{
+  console.log("Go to profile");
+}
+let testdelete = () =>{
+  console.log("Delete");
+}
 
         return(
 
@@ -33,10 +39,10 @@ class Cards extends React.Component {
                        </Card.Content>
                        <Card.Content extra>
                          <div className='ui two buttons'>
-                           <Button basic color='black' >
+                           <Button basic color='black' onClick={testprofile} >
                              Edit
                            </Button>
-                           <Button basic color='red'>
+                           <Button basic color='red' onClick={testdelete}>
                              Delete
                            </Button>
                          </div>
