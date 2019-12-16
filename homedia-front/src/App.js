@@ -20,13 +20,17 @@ class App extends React.Component {
 
 
                   <Switch>
+
+
+
+
                     <Route path="/admin">
 
                     <AdminApp/>
 
                     </Route>
 
-                    <Route path="/home">
+                    <Route path="/">
                     <Landing/>
                     </Route>
 

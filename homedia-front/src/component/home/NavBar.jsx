@@ -27,7 +27,7 @@ const NavBar = () => (
       <Menu.Item position='right'>
       <Dropdown item icon='align justify' >
       <Dropdown.Menu >
-      <Link to="/admin/upload">
+      <Link to="/admin">
           <Dropdown.Item><p style={{"color":"black"}}>Upload</p></Dropdown.Item>
           </Link>
           <Dropdown.Item>Dark Mode</Dropdown.Item>
