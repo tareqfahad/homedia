@@ -1,5 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
+var cors = require('cors')
 
 // App
 const app = express()
@@ -18,8 +19,10 @@ const musicRoute = require('./Route/music')
 
 
 // Middlewares
+app.use(cors())
 app.use(express.urlencoded({extended:false}))
-app.use(express.json())
+app.use(express.json({limit: '50gb', extended: true}));
+
 
 app.use('/show' , showRoute)
 app.use('/users' , usersRoute)
