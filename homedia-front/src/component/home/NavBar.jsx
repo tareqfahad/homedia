@@ -1,25 +1,41 @@
+import { Dropdown, Icon, Menu, Segment } from 'semantic-ui-react'
+import { Link } from "react-router-dom";
 import React from 'react'
-import { Navbar, Nav, Dropdown} from 'react-bootstrap'
 
 
 const NavBar = () => (
   <div>
-      <Navbar expand="lg" bg="primary" variant="dark">
-    <Navbar.Brand href="/home">HoMedia</Navbar.Brand>
-    <Nav className="mr-auto">
-      <Nav.Link href=""></Nav.Link>
-    </Nav>
+<Menu inverted visible attached='top'>
 
-<Dropdown>
-  <Dropdown.Toggle variant="primary" id="dropdown-basic">
-    More    
-  </Dropdown.Toggle>
-  <Dropdown.Menu>
-    <Dropdown.Item href="#/action-1">Upload</Dropdown.Item>
-    <Dropdown.Item href="#/action-2">Dark mode</Dropdown.Item>
-  </Dropdown.Menu>
-</Dropdown>
-  </Navbar>
+      <Link to="/home">
+          <Menu.Item >
+             Home
+           </Menu.Item>
+           </Link>
+
+      <Link to="/videos">
+          <Menu.Item >
+             Videos
+           </Menu.Item>
+           </Link>
+
+           <Link to="/music">
+          <Menu.Item >
+             Music
+           </Menu.Item>
+           </Link>
+      <Menu.Item position='right'>
+      <Dropdown item icon='align justify' >
+      <Dropdown.Menu >
+      <Link to="/admin/upload">
+          <Dropdown.Item><p style={{"color":"black"}}>Upload</p></Dropdown.Item>
+          </Link>
+          <Dropdown.Item>Dark Mode</Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
+      </Menu.Item>
+    </Menu>
+
   </div>
 )
 

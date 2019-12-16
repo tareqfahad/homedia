@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import 'semantic-ui-css/semantic.min.css'
 import * as serviceWorker from './serviceWorker';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/video-react/dist/video-react.css'; 
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
