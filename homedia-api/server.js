@@ -24,10 +24,10 @@ app.use(express.urlencoded({extended:false}))
 app.use(express.json({limit: '50gb', extended: true}));
 
 
-app.use('/show' , showRoute)
-app.use('/users' , usersRoute)
-app.use('/music' , musicRoute)
-app.use('/video' , videoRoute)
+app.use('/api/show' , showRoute)
+app.use('/api/users' , usersRoute)
+app.use('/apimusic' , musicRoute)
+app.use('/api/video' , videoRoute)
 
 
 

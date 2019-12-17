@@ -6,7 +6,8 @@ class UploadVideo extends React.Component {
 state={
   path:null,
   poster:null,
-  video:null
+  video:null,
+  apistatus:null
 }
   render () {
 
@@ -15,7 +16,7 @@ state={
 
 let submitHondler = () => {
 
-      axios.post('http://localhost:62300/video/new', {
+      axios.post('http://localhost:62300/api/video/new', {
 
           name:this.state.path,
           posterpath:this.state.poster,
@@ -23,14 +24,16 @@ let submitHondler = () => {
 
       })
       .then(data => {
-        console.log(data);
+        if (data.status === 200) {
+
+            this.setState({apistatus:"Files uploaded successfully"})
+
+
+        }
       }).catch(err => {
-        console.log(err);
+        this.setState({apistatus:"Somthing wrong"})
       })
 
-      console.log(this.state.path);
-      console.log("Poster",this.state.poster);
-      console.log("video" , this.state.video);
 
 }
 
@@ -140,7 +143,7 @@ let onChangeHandlerPoster = e =>{
                         <br/>
 
 
-
+                                    <h1>{this.state.apistatus}</h1>
                       </Form>
 
                       </div>
