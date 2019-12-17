@@ -2,10 +2,16 @@ import React from 'react'
 import { Grid, Image , Icon  , Card} from 'semantic-ui-react'
 import Piechar from './Pie'
 import Cards from './Cards'
+import {checkAuth} from './Auth'
+import { withRouter } from 'react-router-dom';
+
+
 
 
 class Admin extends React.Component {
-  render () {
+  render () 
+  {
+    checkAuth(this.props)
 
 
 
@@ -54,4 +60,4 @@ class Admin extends React.Component {
   }
 }
 
-export default Admin;
+export default withRouter(Admin)

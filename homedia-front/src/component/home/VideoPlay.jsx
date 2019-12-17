@@ -37,8 +37,9 @@ class VideoPlay extends Component {
         {/* {this.state.data !== null && this.state.data.data.map((videoss, i)=>{
           return <VideoPlayContainer video={videoss}/>
        })} */}
-       
+       <div>
        <VideoPlayContainer/>
+       </div>
      
       </div>
     );
