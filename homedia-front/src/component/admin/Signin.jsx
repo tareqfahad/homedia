@@ -7,7 +7,9 @@ import {login} from './Auth'
 
 export default class Signin extends Component {
 
-  
+  state={
+    err:'noerr'
+  }
   
   onChangeHandler = e =>{
     this.setState({
@@ -22,11 +24,21 @@ export default class Signin extends Component {
     {
       window.location.href ="/admin"
     }
+    else{
+      this.setState({err:''})
+      console.log("fegege");
+      
+    }
     })
-    .catch(err => console.log(err)
-    )
+
+    .catch(err => {
+      console.log(err);
+
+    })
+    
   }
 
+    // this.setState({err:''})
   
     render() {
         return (
@@ -68,7 +80,15 @@ export default class Signin extends Component {
           </Button>
         </Segment>
       </Form>
+      <Message
+      error
+      header='Password or Username is not correct'
+      content='Please enter the correct Password or Username'
+      hidden={this.state.err}
+      
+      />
       <Message>
+    
         New to us? <Link to="/signup"><a>Sign Up</a></Link>
       </Message>
     </Grid.Column>

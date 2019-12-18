@@ -1,4 +1,5 @@
 import React from 'react';
+import NavBar from './NavBar'
 import './assets/homestyle.css'
 import { Player } from 'video-react';
 import axios from 'axios'
@@ -6,12 +7,9 @@ import axios from 'axios'
 
 class VideoPlayContainer extends React.Component {
 
-
-
 state={
     video:null
 }
-
 
 componentDidMount(){
 
@@ -23,21 +21,21 @@ componentDidMount(){
     })
 
 
-
-
 }
 
   render () {
   console.log(this.props.match.params.id);
 
       return (
-
+<div>
+  <NavBar/>
         <div className="vidContainer">
         <Player
           playsInline
           poster="/assets/poster.png"
           src={this.state.video}
         />
+        </div>
         </div>
       );
 

@@ -4,6 +4,7 @@ import Admin from './Admin'
 import Upload from './Upload'
 import Settings from './Settings'
 import Editpost from './Editpost'
+import App from '../../App'
 import {BrowserRouter as Router,Switch,Route , Redirect} from "react-router-dom";
 
 
@@ -44,6 +45,10 @@ class AdminApp extends React.Component {
 
               <Admin/>
 
+              </Route>
+              
+              <Route path="/home">
+                    <App/>
               </Route>
 
 
