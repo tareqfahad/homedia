@@ -33,7 +33,7 @@ export default class Signup extends Component {
                 <Menu.Item >
                     HoModie
                 </Menu.Item>
-     
+
 
             <Link to="/signin">
                 <Menu.Item position='right'>
@@ -63,11 +63,11 @@ export default class Signup extends Component {
           <Form.Input
             fluid
             icon='lock'
-            name="password"
+          
             iconPosition='left'
             placeholder='Confirm Password'
             type='password'
-            onChange={this.onChangeHandler}
+
           />
 
           <Button color='black' fluid size='large'>

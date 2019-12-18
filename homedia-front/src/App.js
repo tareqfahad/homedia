@@ -4,7 +4,8 @@ import Signup from './component/admin/Signup'
 import Signin from './component/admin/Signin'
 import Landing from './component/home/Landing'
 import Home from './component/home/Home'
-import VideoPlay from './component/home/VideoPlay'
+import VideoPlay from './component/home/VideoPlayContainer'
+
 
 import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
 
@@ -37,13 +38,12 @@ class App extends React.Component {
                     <Landing/>
                     </Route>
 
-                    <Route path="/home">
-                    <Home/>
-                    </Route>
 
-                    <Route path="/video">
+                    <Route exact path="/video">
                     <VideoPlay/>
                     </Route>
+                    <Route exact path="/video/:id" render ={ (props)=> <VideoPlay {...props}/> }/>
+
 
                     <Route path="/signup">
                     <Signup/>
@@ -52,6 +52,11 @@ class App extends React.Component {
                     <Route path="/signin">
                     <Signin/>
                     </Route>
+
+
+                   <Route path="/">
+                    <Home/>
+                  </Route>
                   </Switch>
 
 

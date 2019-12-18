@@ -1,11 +1,12 @@
 import { Card, Image} from 'semantic-ui-react'
 import React, { Component } from 'react'
-
+import {Link} from 'react-router-dom'
 
 const VideoCard = (props) => {
-    console.log(props)
+
     return (
-        <div>
+      <Link  to ={`/video/${props.id}`}>
+        <div >
     <Card style={{"margin":"10px"}}>
     <Card.Content>
         <Image variant="top" src={props.video.posterpath} alt="poster"/>
@@ -13,9 +14,9 @@ const VideoCard = (props) => {
         </Card.Content>
     </Card>
         </div>
+        </Link>
     )
 }
 
 
 export default VideoCard
-

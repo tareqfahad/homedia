@@ -9,6 +9,33 @@ state={
   video:null,
   apistatus:null
 }
+
+
+ onChangeHandlerPoster = e =>{
+  let poster = e.target.files
+  let reader = new FileReader()
+  reader.readAsDataURL(poster[0])
+  reader.onload = (e)=> {
+
+      this.setState({
+          poster:e.target.result
+      })
+
+
+  }
+
+
+}
+
+
+onChangeHandlerName = e => {
+    this.setState({
+      path:e.target.value
+    })
+}
+
+
+
   render () {
 
 
@@ -38,13 +65,6 @@ let submitHondler = () => {
 }
 
 
-let onChangeHandlerName = e => {
-    this.setState({
-      path:e.target.value
-    })
-}
-
-
 
 
 
@@ -62,27 +82,13 @@ let onChangeHandlerVideo = e =>{
   }
 
 }
-let onChangeHandlerPoster = e =>{
-  let poster = e.target.files
-  let reader = new FileReader()
-  reader.readAsDataURL(poster[0])
-  reader.onload = (e)=> {
-
-      this.setState({
-          poster:e.target.result
-      })
-
-
-  }
-
-
-}
 
 
 
 
 
 
+  console.log(this.state.video)
 
           return(
 
@@ -102,7 +108,7 @@ let onChangeHandlerPoster = e =>{
           <Form>
               <Form.Field>
                 <label>Name</label>
-                <input placeholder='File Name' type='field' name="name" onChange={onChangeHandlerName} value={this.state.path} />
+                <input placeholder='File Name' type='field' name="name" onChange={this.onChangeHandlerName} value={this.state.path} />
               </Form.Field>
               <Form.Field>
 
@@ -112,7 +118,7 @@ let onChangeHandlerPoster = e =>{
                                name="files"
                                type="file"
 
-                               onChange={onChangeHandlerPoster}
+                               onChange={this.onChangeHandlerPoster}
                              />
 
 

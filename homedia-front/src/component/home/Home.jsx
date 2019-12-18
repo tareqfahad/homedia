@@ -33,13 +33,16 @@ class Home extends Component {
                 <Grid>
               <Grid.Column>
                 <HorizontalScroller sensibility={3}>
-                 
+
                 {this.state.video !== null && this.state.video.videos.map((cards, i)=>{
-                return <VideoCard video={cards}/>
+                return  <VideoCard {...this.props} video={cards} id={cards._id}/>
+
               })}
+
+
                 </HorizontalScroller>
                 </Grid.Column>
-                </Grid> 
+                </Grid>
             <div>
               <br/>
               <br/>
@@ -47,13 +50,13 @@ class Home extends Component {
         <Grid>
               <Grid.Column>
                 <HorizontalScroller sensibility={3}>
-                 
+
                 {this.state.video !== null && this.state.video.videos.map((cards, i)=>{
                 return <VideoCard video={cards}/>
               })}
                 </HorizontalScroller>
                 </Grid.Column>
-                </Grid> 
+                </Grid>
              </div>
             </div>
         )
