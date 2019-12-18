@@ -4,7 +4,7 @@ import decode from "jwt-decode";
 
 export const register = newUser => {
   return axios
-    .post("/users/register", newUser)
+    .post("api/users/register", newUser)
     .then(res => {
         console.log(res);
         
@@ -15,7 +15,7 @@ export const register = newUser => {
 export const login = user => {
     
   return axios
-    .post("/users/login", user)
+    .post("api/users/login", user)
     .then(async res => {
       localStorage.setItem("usertoken", res.data.token);
       const decodedToken = await decode(res.data.token);

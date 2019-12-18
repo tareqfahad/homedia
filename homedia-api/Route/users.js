@@ -26,6 +26,26 @@ router.delete('/delete/:id' , (req , res) => {
     res.json(err)
   })
 })
+
+//update user
+
+router.put('/update/:id', async (req,res) => {
+	try{
+		let updateBody = {};
+
+		req.body.newPassword? updateBody.password = req.body.newPassword: updateBody;
+		const user = await User.findByIdAndUpdate(req.params.id, updateBody);
+		if(!user){
+			res.status(404).json({message: "user not found"});
+		}else{
+			res.json({message: "Password Updated", user});
+		}
+	}catch(err){
+		res.json({message: err});
+	}
+});
+
+
 router.post("/register", (req, res) => {
     const newUser = { ...req.body };
     User.findOne({ username: newUser.username })
