@@ -24,9 +24,9 @@ class AdminApp extends React.Component {
 
             <Switch>
 
-              <Route   path="/admin/edit">
-                  <Editpost/>
-              </Route>
+              <Route   path="/admin/edit/:id" render={(props)=>   <Editpost {...props}/>} />
+
+
 
               <Route path="/admin/upload">
 
@@ -46,7 +46,7 @@ class AdminApp extends React.Component {
               <Admin/>
 
               </Route>
-              
+
               <Route path="/home">
                     <App/>
               </Route>

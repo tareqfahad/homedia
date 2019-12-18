@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button, Card, Image } from 'semantic-ui-react'
 import axios from 'axios'
+import {Link} from 'react-router-dom'
 
 class Cards extends React.Component {
 
@@ -12,18 +13,12 @@ class Cards extends React.Component {
 
 
 
-console.log(this.state.info);
-
-let testprofile = () =>{
 
 
 
 
 
-}
-
-
-let testdelete = () =>{
+let ondelete = () =>{
 
   axios.delete(`http://localhost:62300/api/video/delete/${this.state.info._id}`)
 
@@ -56,12 +51,20 @@ let testdelete = () =>{
                        </Card.Content>
                        <Card.Content extra>
                          <div className='ui two buttons'>
-                           <Button basic color='black' onClick={testprofile} >
+
+                            <Link to ={`/admin/edit/${this.state.info._id}`}>
+                         <Button basic color='black'>
                              Edit
                            </Button>
-                           <Button basic color='red' onClick={testdelete}>
+                         </Link>
+
+                
+                           <Button basic color='red' onClick={ondelete}>
                              Delete
                            </Button>
+
+
+
                          </div>
                        </Card.Content>
                      </Card>

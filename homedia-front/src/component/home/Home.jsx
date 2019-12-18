@@ -19,7 +19,7 @@ class Home extends Component {
   componentDidMount() {
     axios.get('http://localhost:62300/api/video')
     .then(data => {
-        console.log(data)
+    
       this.setState({video:data.data})
     });
   }

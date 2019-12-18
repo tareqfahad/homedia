@@ -4,7 +4,44 @@ import { Grid , Form , Button } from 'semantic-ui-react'
 
 
 class Editpost extends React.Component {
+
+state={
+  name:null
+}
+
+  componentDidMount(){
+
+      axios.get(`http://localhost:62300/api/video/find/${this.props.match.params.id}`)
+      .then(data => {
+        this.setState({
+          name:data.data.name
+        })
+      })
+
+
+  }
+
+onHandlerChange = e =>{
+  this.setState({
+    name:e.target.value
+  })
+}
+
+onSubmit = e => {
+
+  
+
+
+}
+
+
   render () {
+
+
+
+
+
+
 
 
         return(
@@ -17,8 +54,8 @@ class Editpost extends React.Component {
 
   <Form>
     <Form.Field>
-      <label>First Name</label>
-      <input placeholder='First Name' />
+      <label>Change name</label>
+      <input placeholder={this.state.name} onChange={this.onHandlerChange} />
     </Form.Field>
 
 
