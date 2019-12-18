@@ -30,20 +30,26 @@ class Home extends Component {
         return (
             <div>
               <NavBar/>
+
+              <div>
+                <br/>
                 <h4><b>Videos</b></h4>
+
                 
                 <Grid>
               <Grid.Column>
-              <HorizontalScroller>
+              <HorizontalScroller sensibility={3}>
                     {this.state.data !== null && this.state.data.data.items.map((bookss, i)=>{
                 return <VideoCard book={bookss}/>
                                   })}
                                   </HorizontalScroller>
                                   </Grid.Column>
                                   </Grid>
+                                  </div>
 
-  
-        {/* <hr/> */}
+            <div>
+              <br/>
+              <br/>
         <h4><b>Music</b></h4>
         <Grid>
               <Grid.Column>
@@ -54,6 +60,7 @@ class Home extends Component {
                                   </HorizontalScroller>
                                   </Grid.Column>
                                   </Grid>
+                                  </div>
             </div>
         )
     }
