@@ -3,16 +3,16 @@ const Schema = mongoose.Schema
 
 
 
-const Music = new Schema({
+const MusicSchema = new Schema({
 
         name: String,
         filepath : String,
 
 
-},{ timestamps , true})
+},{ timestamps: true})
 
 
 
-const Music = mongoose.model('Music' , PostSchema);
+const Music = mongoose.model('Music' , MusicSchema);
 
 module.exports = Music
