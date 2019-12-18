@@ -60,6 +60,15 @@ export default class Signup extends Component {
             type='password'
             onChange={this.onChangeHandler}
           />
+          <Form.Input
+            fluid
+            icon='lock'
+            name="password"
+            iconPosition='left'
+            placeholder='Confirm Password'
+            type='password'
+            onChange={this.onChangeHandler}
+          />
 
           <Button color='black' fluid size='large'>
             Sign Up

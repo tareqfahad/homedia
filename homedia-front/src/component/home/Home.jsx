@@ -9,58 +9,52 @@ import React, { Component } from 'react'
 
 
 class Home extends Component {
-    constructor(props) {
-        super();
-        this.state = {
-          data: null
-        };
-      }
-      componentDidMount() {
-        axios({
-            "method":"GET",
-            "url":"https://www.googleapis.com/books/v1/volumes?q=$music",
-            }).then(response => {
-          console.log(response);
-          this.setState({data : response})
-        });
-      }
-
+  constructor(props) {
+    super(props);
+    this.state = {
+      video: null,
+    };
+  }
+  componentDidMount() {
+    axios.get('http://localhost:62300/api/video')
+    .then(data => {
+        console.log(data)
+      this.setState({video:data.data})
+    });
+  }
 
     render() {
+      console.log(this.state.video)
         return (
             <div>
               <NavBar/>
-
-              <div>
                 <br/>
                 <h4><b>Videos</b></h4>
-
-                
                 <Grid>
               <Grid.Column>
-              <HorizontalScroller sensibility={3}>
-                    {this.state.data !== null && this.state.data.data.items.map((bookss, i)=>{
-                return <VideoCard book={bookss}/>
-                                  })}
-                                  </HorizontalScroller>
-                                  </Grid.Column>
-                                  </Grid>
-                                  </div>
-
+                <HorizontalScroller sensibility={3}>
+                 
+                {this.state.video !== null && this.state.video.videos.map((cards, i)=>{
+                return <VideoCard video={cards}/>
+              })}
+                </HorizontalScroller>
+                </Grid.Column>
+                </Grid> 
             <div>
               <br/>
               <br/>
         <h4><b>Music</b></h4>
         <Grid>
               <Grid.Column>
-              <HorizontalScroller>
-                    {this.state.data !== null && this.state.data.data.items.map((bookss, i)=>{
-                return <VideoCard book={bookss}/>
-                                  })}
-                                  </HorizontalScroller>
-                                  </Grid.Column>
-                                  </Grid>
-                                  </div>
+                <HorizontalScroller sensibility={3}>
+                 
+                {this.state.video !== null && this.state.video.videos.map((cards, i)=>{
+                return <VideoCard video={cards}/>
+              })}
+                </HorizontalScroller>
+                </Grid.Column>
+                </Grid> 
+             </div>
             </div>
         )
     }
