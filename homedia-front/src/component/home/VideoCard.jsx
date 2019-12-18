@@ -1,20 +1,21 @@
-import HorizontalScroller from 'react-horizontal-scroll-container';
-import { Card, Icon, Image, Grid } from 'semantic-ui-react'
-import React from 'react'
+import { Card, Image} from 'semantic-ui-react'
+import React, { Component } from 'react'
 
 
 const VideoCard = (props) => {
+    console.log(props)
     return (
-        <div style={{"margin":"5px"}}>
-    <Card >
-        <Image variant="top" src={props.book.volumeInfo.imageLinks !== undefined ?  props.book.volumeInfo.imageLinks.thumbnail : props.img} alt="books"/>
-        <Card.Content>
-            <Card.Header>{props.book.volumeInfo.title}</Card.Header>
+        <div>
+    <Card style={{"margin":"10px"}}>
+    <Card.Content>
+        <Image variant="top" src={props.video.posterpath} alt="poster"/>
+        <Card.Header style={{"textAlign":"center"}}>{props.video.name}</Card.Header>
         </Card.Content>
     </Card>
         </div>
     )
 }
+
 
 export default VideoCard
 
