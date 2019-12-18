@@ -60,7 +60,7 @@ let test =()=>{
             </Link>
 
                 {/*Needs to Redirect to home page */}
-              <Link to="/admin/settings">
+              <Link to="/home">
             <a className="toMainPage">Homedia</a>
             </Link>
 

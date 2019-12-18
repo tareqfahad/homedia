@@ -6,17 +6,28 @@ import { Link } from "react-router-dom";
 import {register} from './Auth'
 
 
+
 export default class Signup extends Component {
 
+
+
+  state={err : "true"}
   onChangeHandler = e =>{
     this.setState({
       [e.target.name]:e.target.value
     })
   }
+
   onSubmitHandler = ()=>{
 
     register(this.state)
     .then(res=>{
+
+      if (this.state.password != this.state.conf){
+        this.setState({err:""})
+        
+      }
+
       if(res)
     {
       window.location.href ="/signin"
@@ -26,6 +37,8 @@ export default class Signup extends Component {
     )
   }
     render() {
+      console.log(this.state);
+      
         return (
         <div>
             <div className="nav">
@@ -63,11 +76,11 @@ export default class Signup extends Component {
           <Form.Input
             fluid
             icon='lock'
-          
+            name='conf'
             iconPosition='left'
             placeholder='Confirm Password'
             type='password'
-
+            onChange={this.onChangeHandler}
           />
 
           <Button color='black' fluid size='large'>
@@ -75,6 +88,13 @@ export default class Signup extends Component {
           </Button>
         </Segment>
       </Form>
+      <Message
+      error
+      header='Password or Username is not correct'
+      content='Please enter the correct Password or Username'
+      hidden={this.state.err}
+      
+      />
       <Message>
         Do you have an account? <Link to="/signin"><a>Sign In</a></Link>
       </Message>

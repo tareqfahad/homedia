@@ -1,6 +1,7 @@
 import NavBar from './NavBar'
 import VideoCard from './VideoCard'
 import axios from 'axios'
+import './assets/homestyle.css'
 import ReactDOM from 'react-dom';
 import { Grid } from 'semantic-ui-react'
 import HorizontalScroller from 'react-horizontal-scroll-container';
@@ -29,7 +30,7 @@ class Home extends Component {
             <div>
               <NavBar/>
                 <br/>
-                <h4><b>Videos</b></h4>
+                <h2 className="titles"><b>Videos</b></h2>
                 <Grid>
               <Grid.Column>
                 <HorizontalScroller sensibility={3}>
@@ -45,8 +46,7 @@ class Home extends Component {
                 </Grid>
             <div>
               <br/>
-              <br/>
-        <h4><b>Music</b></h4>
+        <h2 className="titles"><b>Music</b></h2>
         <Grid>
               <Grid.Column>
                 <HorizontalScroller sensibility={3}>
