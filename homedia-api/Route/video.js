@@ -58,7 +58,22 @@ route.delete('/delete/:id' , (req , res) => {
 })
 
 
+route.put('/update/:id' , async (req , res ) => {
 
+	try {
+		let update = await Video.findByIdAndUpdate({"_id" : req.params.id}, {"name" : req.body.name})
+		res.json(update)
+
+		} catch(err) {
+				res.json("Can't find anything")
+
+		}
+
+
+
+
+
+})
 
 
 module.exports = route
