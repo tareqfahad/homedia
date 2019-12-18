@@ -13,6 +13,7 @@ const showRoute = require('./Route/show')
 const usersRoute = require('./Route/users')
 const videoRoute = require('./Route/video')
 const musicRoute = require('./Route/music')
+const userRoute = require('./Route/users')
 
 
 
@@ -28,6 +29,7 @@ app.use('/api/show' , showRoute)
 app.use('/api/users' , usersRoute)
 app.use('/api/music' , musicRoute)
 app.use('/api/video' , videoRoute)
+app.use('/api/user' , userRoute)
 
 
 

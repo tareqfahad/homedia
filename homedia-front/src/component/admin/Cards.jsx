@@ -31,7 +31,7 @@ let testdelete = () =>{
                            size='mini'
                            src='https://previews.123rf.com/images/sauvignon/sauvignon1505/sauvignon150500424/40135093-placeholder-banner-cat.jpg'
                          />
-                       <Card.Header>Movie name</Card.Header>
+                       <Card.Header>{this.props.name}</Card.Header>
 
                          <Card.Description>
                            <strong>Upload date</strong>

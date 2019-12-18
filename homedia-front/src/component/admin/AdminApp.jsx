@@ -3,6 +3,7 @@ import Navbar from './Navbar'
 import Admin from './Admin'
 import Upload from './Upload'
 import Settings from './Settings'
+import Editpost from './Editpost'
 import {BrowserRouter as Router,Switch,Route , Redirect} from "react-router-dom";
 
 
@@ -21,6 +22,11 @@ class AdminApp extends React.Component {
           <Navbar/>
 
             <Switch>
+
+              <Route   path="/admin/edit">
+                  <Editpost/>
+              </Route>
+
               <Route path="/admin/upload">
 
               <Upload/>
@@ -39,6 +45,9 @@ class AdminApp extends React.Component {
               <Admin/>
 
               </Route>
+
+
+
 
 
 
