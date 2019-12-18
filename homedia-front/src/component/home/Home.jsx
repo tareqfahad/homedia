@@ -1,5 +1,6 @@
 import NavBar from './NavBar'
 import VideoCard from './VideoCard'
+import MusicCard from './MusicCard'
 import axios from 'axios'
 import './assets/homestyle.css'
 import ReactDOM from 'react-dom';
@@ -14,6 +15,7 @@ class Home extends Component {
     super(props);
     this.state = {
       video: null,
+      music: null
     };
   }
   componentDidMount() {
@@ -22,9 +24,15 @@ class Home extends Component {
         console.log(data)
       this.setState({video:data.data})
     });
+    axios.get('http://localhost:62300/api/show/music')
+    .then(data2 => {
+        console.log(data2)
+      this.setState({music:data2.data})
+    });
   }
 
     render() {
+      console.log(this.state.music)
       console.log(this.state.video)
         return (
             <div>
@@ -51,8 +59,8 @@ class Home extends Component {
               <Grid.Column>
                 <HorizontalScroller sensibility={3}>
 
-                {this.state.video !== null && this.state.video.videos.map((cards, i)=>{
-                return <VideoCard video={cards}/>
+                {this.state.music !== null && this.state.music.map((cards, i)=>{
+                return <MusicCard {...this.props} music={cards} id={cards._id}/>
               })}
                 </HorizontalScroller>
                 </Grid.Column>

@@ -28,14 +28,14 @@ export default class NavBar extends Component {
                 </div>
 
                 <div style={{"marginTop":"8px"}}>
-          <Link to="/videos">
+          <Link to="/allvideos">
           <Menu.Item >
              Videos
            </Menu.Item>
            </Link>
            </div>
            <div style={{"marginTop":"8px"}}>
-          <Link to="/music">
+          <Link to="/allmusic">
           <Menu.Item >
              Music
              </Menu.Item>
