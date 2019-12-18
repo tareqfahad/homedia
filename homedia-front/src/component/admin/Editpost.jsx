@@ -29,7 +29,9 @@ onHandlerChange = e =>{
 
 onSubmit = e => {
 
-  
+axios.put(`http://localhost:62300/api/video/update/${this.props.match.params.id}`,{
+  name:this.state.name
+})
 
 
 }
@@ -37,7 +39,7 @@ onSubmit = e => {
 
   render () {
 
-
+console.log(this.props.match.params.id);
 
 
 
@@ -60,7 +62,7 @@ onSubmit = e => {
 
 
 
-    <Button type='submit'>Submit</Button>
+    <Button type='submit' onClick={this.onSubmit}>Submit</Button>
   </Form>
 
 
