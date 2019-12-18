@@ -1,17 +1,34 @@
 import React from 'react'
 import { Button, Card, Image } from 'semantic-ui-react'
+import axios from 'axios'
 
 class Cards extends React.Component {
+
+  state={
+    info:this.props.video
+  }
+
   render () {
 
 
-    console.log('this is CARDS');
+
+console.log(this.state.info);
 
 let testprofile = () =>{
-  console.log("Go to profile");
+
+
+
+
+
 }
+
+
 let testdelete = () =>{
-  console.log("Delete");
+
+  axios.delete(`http://localhost:62300/api/video/delete/${this.state.info._id}`)
+
+
+
 }
 
         return(
@@ -29,12 +46,12 @@ let testdelete = () =>{
                          <Image
                            floated='right'
                            size='mini'
-                           src='https://previews.123rf.com/images/sauvignon/sauvignon1505/sauvignon150500424/40135093-placeholder-banner-cat.jpg'
+                           src={this.state.info.posterpath}
                          />
-                       <Card.Header>{this.props.name}</Card.Header>
+                       <Card.Header>{this.state.info.name}</Card.Header>
 
                          <Card.Description>
-                           <strong>Upload date</strong>
+                           <strong>{this.state.info.createdAt}</strong>
                          </Card.Description>
                        </Card.Content>
                        <Card.Content extra>

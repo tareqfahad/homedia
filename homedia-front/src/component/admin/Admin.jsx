@@ -11,33 +11,20 @@ import axios from 'axios'
 class Admin extends React.Component {
 
 state={
-  data:[],
+  data:null,
   movie:"Hello"
 }
 
-
 componentDidMount(){
 
-Promise.all([
+  axios.get('http://localhost:62300/api/video')
+  .then(response => {
+    this.setState({data:response.data})
+  })
 
-  axios.get('http://localhost:62300/api/show/video'),
-  axios.get('http://localhost:62300/api/show/music')
 
-]).then(data => {
-    this.setState({data:data})
-}).catch(err => {
-  console.log(err);
-})
 
 }
-
-cards = this.state.data.map(e => {
-
-      console.log(this.state.data[2]);
-
-
-})
-
 
 
 
@@ -47,7 +34,7 @@ cards = this.state.data.map(e => {
   {
     checkAuth(this.props)
 
-
+console.log(this.state.data);
 
 
 
@@ -63,8 +50,10 @@ cards = this.state.data.map(e => {
             <Grid.Column>
 
               <Card.Group>
+                {this.state.data !== null && this.state.data.videos.map((e)=>{
+                return  <Cards video={e} />
+                })}
 
-                <Cards name={this.state.movie}/>
 
 
             </Card.Group>
