@@ -30,6 +30,36 @@
   cursor: pointer !important;
 }
 /* music play */
-.musicpage{
-    background-image: url('/../homedia/homedia-front/src/bk.jpg');
+.contImg{
+    /* height: 700px;
+    width: 1200px; */
+    height: 800px;
+    width: 600px;
+    margin-right: 50px;
+    float: right;
+    /* margin-left: 210px; */
+}
+
+.musicContainer{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: 350px;
+}
+
+/* about */
+.aboutCont{
+    margin-top: 100px;
+}
+
+.imgg{
+    text-align: center;
+    
+}
+
+.aboutHeader{
+    text-align: center;
+    font-size: 50px;
 }

@@ -42,15 +42,16 @@ export default class NavBar extends Component {
              </Link>
              </div>
              
-           
 
               <Menu.Menu position='right'>
-                <Dropdown text='Dropdown' pointing className='link item'>
+                <Dropdown style={{"marginRight":"10px"}}text='More' pointing className='link item'>
                   <Dropdown.Menu>
                   <Link to="/admin">
                     <Dropdown.Item><p style={{"color":"black"}}>Upload</p></Dropdown.Item>
                     </Link>
-                    <Dropdown.Item>Dark mode</Dropdown.Item>
+                    <Link to="/about">
+                    <Dropdown.Item><p style={{"color":"black"}}>About</p></Dropdown.Item>
+                    </Link>
                   </Dropdown.Menu>
                 </Dropdown>
               </Menu.Menu>
