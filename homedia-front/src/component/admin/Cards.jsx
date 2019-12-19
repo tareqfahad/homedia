@@ -1,17 +1,29 @@
 import React from 'react'
 import { Button, Card, Image } from 'semantic-ui-react'
+import axios from 'axios'
+import {Link} from 'react-router-dom'
 
 class Cards extends React.Component {
+
+  state={
+    info:this.props.video
+  }
+
   render () {
 
 
-    console.log('this is CARDS');
 
-let testprofile = () =>{
-  console.log("Go to profile");
-}
-let testdelete = () =>{
-  console.log("Delete");
+
+
+
+
+
+let ondelete = () =>{
+
+  axios.delete(`http://localhost:62300/api/video/delete/${this.state.info._id}`)
+
+
+
 }
 
         return(
@@ -29,22 +41,30 @@ let testdelete = () =>{
                          <Image
                            floated='right'
                            size='mini'
-                           src='https://previews.123rf.com/images/sauvignon/sauvignon1505/sauvignon150500424/40135093-placeholder-banner-cat.jpg'
+                           src={this.state.info.posterpath}
                          />
-                       <Card.Header>Movie name</Card.Header>
+                       <Card.Header>{this.state.info.name}</Card.Header>
 
                          <Card.Description>
-                           <strong>Upload date</strong>
+                           <strong>{this.state.info.createdAt}</strong>
                          </Card.Description>
                        </Card.Content>
                        <Card.Content extra>
                          <div className='ui two buttons'>
-                           <Button basic color='black' onClick={testprofile} >
+
+                            <Link to ={`/admin/edit/${this.state.info._id}`}>
+                         <Button basic color='black'>
                              Edit
                            </Button>
-                           <Button basic color='red' onClick={testdelete}>
+                         </Link>
+
+                
+                           <Button basic color='red' onClick={ondelete}>
                              Delete
                            </Button>
+
+
+
                          </div>
                        </Card.Content>
                      </Card>

@@ -1,0 +1,65 @@
+/* video / cards CSS */
+.vidContainer{
+    margin:auto;
+    margin-top: 120px;
+    width: 60%;
+}
+.CardImage{
+    height: 250px;
+    width: 250px;
+    margin-bottom: 3px;
+    
+}
+.CardHeader{
+    font-size: 23px;
+    font-weight: bold;
+    text-align : center;
+}
+.CardCSS{
+    margin: 10px;
+}
+/* Home CSS */
+.titles{
+    text-align : center;
+    font-family: fantasy;
+}
+
+.ui.card{
+    border-radius: 25px !important;
+    box-shadow: 4px 4px 4px 4px rgba(0,0,0,0.25), -3px -3px 4px 4px rgba(0,0,0,0.22) !important;
+  cursor: pointer !important;
+}
+/* music play */
+.contImg{
+    /* height: 700px;
+    width: 1200px; */
+    height: 800px;
+    width: 600px;
+    margin-right: 50px;
+    float: right;
+    /* margin-left: 210px; */
+}
+
+.musicContainer{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: 350px;
+}
+
+/* about */
+.aboutCont{
+    margin-top: 100px;
+}
+
+.imgg{
+    text-align: center;
+    
+}
+
+.aboutHeader{
+    text-align: center;
+    font-size: 50px;
+}

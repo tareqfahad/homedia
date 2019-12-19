@@ -1,42 +1,62 @@
-import { Dropdown, Icon, Menu, Segment } from 'semantic-ui-react'
+import logo from '../../logo.png';
 import { Link } from "react-router-dom";
-import React from 'react'
+import React, { Component } from 'react'
+import {
+  Dropdown,
+  Image,
+  Menu,
+} from 'semantic-ui-react'
 
+export default class NavBar extends Component {
 
-const NavBar = () => (
-  <div>
-<Menu inverted visible attached='top'>
+  render() {
 
-      <Link to="/home">
-          <Menu.Item >
-             Home
-           </Menu.Item>
-           </Link>
+    return (
+      <div>
+          <Menu inverted visible >
+              <Menu.Item>
+                <Image size='mini' src={logo} />
+              </Menu.Item>
 
-      <Link to="/videos">
+             
+              <div style={{"marginTop":"8px"}}>
+              <Link to="/home">
+              <Menu.Item header>
+                <b>Home</b>
+                </Menu.Item>
+                </Link>
+                </div>
+
+                <div style={{"marginTop":"8px"}}>
+          <Link to="/allvideos">
           <Menu.Item >
              Videos
            </Menu.Item>
            </Link>
-
-           <Link to="/music">
+           </div>
+           <div style={{"marginTop":"8px"}}>
+          <Link to="/allmusic">
           <Menu.Item >
              Music
-           </Menu.Item>
-           </Link>
-      <Menu.Item position='right'>
-      <Dropdown item icon='align justify' >
-      <Dropdown.Menu >
-      <Link to="/admin">
-          <Dropdown.Item><p style={{"color":"black"}}>Upload</p></Dropdown.Item>
-          </Link>
-          <Dropdown.Item>Dark Mode</Dropdown.Item>
-        </Dropdown.Menu>
-      </Dropdown>
-      </Menu.Item>
-    </Menu>
+             </Menu.Item>
+             </Link>
+             </div>
+             
 
-  </div>
-)
-
-export default NavBar
+              <Menu.Menu position='right'>
+                <Dropdown style={{"marginRight":"10px"}}text='More' pointing className='link item'>
+                  <Dropdown.Menu>
+                  <Link to="/admin">
+                    <Dropdown.Item><p style={{"color":"black"}}>Upload</p></Dropdown.Item>
+                    </Link>
+                    <Link to="/about">
+                    <Dropdown.Item><p style={{"color":"black"}}>About</p></Dropdown.Item>
+                    </Link>
+                  </Dropdown.Menu>
+                </Dropdown>
+              </Menu.Menu>
+          </Menu>
+      </div>
+    )
+  }
+}
