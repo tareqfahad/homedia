@@ -1,11 +1,48 @@
-import React, { Component } from 'react'
+import React from 'react';
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
+import NavBar from './NavBar'
+import './assets/homestyle.css'
+import axios from 'axios'
 
-export default class MusicPlay extends Component {
-    render() {
-        return (
-            <div>
-                
-            </div>
-        )
-    }
+class MusicPlay extends React.Component {
+
+state={
+    music:null
 }
+
+componentDidMount(){
+
+    axios.get(`http://localhost:62300/api/music/find/${this.props.match.params.id}`)
+    .then(data => {
+        console.log(data)
+      this.setState({
+        music:data.data.filepath
+        
+      })
+      
+    })
+
+
+}
+
+  render () {
+  console.log(this.props.match.params.id);
+
+      return (
+<div className="musicpage">
+  <NavBar/>
+        <div className="vidContainer">
+        <AudioPlayer
+    autoPlay
+    // src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+    src={this.state.music}
+  />
+        </div>
+        </div>
+      );
+
+  }
+}
+
+export default MusicPlay ;
