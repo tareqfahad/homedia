@@ -6,6 +6,7 @@ export default class AllMusic extends Component {
         return (
             <div>
                 <NavBar/>
+                <h1 style={{"textAlign":"center"}}>Comming Soon</h1>
             </div>
         )
     }

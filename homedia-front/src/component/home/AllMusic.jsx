@@ -1,4 +1,5 @@
 import NavBar from './NavBar'
+import MusicCard from './MusicCard'
 import React, { Component } from 'react'
 
 export default class AllMusic extends Component {
@@ -6,7 +7,7 @@ export default class AllMusic extends Component {
         return (
             <div>
                 <NavBar/>
-                
+            <h1 style={{"textAlign":"center"}}>Comming Soon</h1>
             </div>
         )
     }

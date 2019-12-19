@@ -90,8 +90,8 @@ export default class Signup extends Component {
       </Form>
       <Message
       error
-      header='Password or Username is not correct'
-      content='Please enter the correct Password or Username'
+      header="Password doesn't match with confirm password"
+      content='Please enter make sure to use the same password for both'
       hidden={this.state.err}
       
       />

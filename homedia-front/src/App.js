@@ -3,6 +3,7 @@ import AdminApp from './component/admin/AdminApp'
 import Signup from './component/admin/Signup'
 import Signin from './component/admin/Signin'
 import Landing from './component/home/Landing'
+import About from './component/home/About'
 import Home from './component/home/Home'
 import VideoPlay from './component/home/VideoPlayContainer'
 import MusicPlay from './component/home/MusicPlay'
@@ -70,6 +71,9 @@ class App extends React.Component {
                     <Signin/>
                     </Route>
 
+                    <Route path="/about">
+                    <About/>
+                    </Route>
 
                    <Route path="/">
                     <Home/>
